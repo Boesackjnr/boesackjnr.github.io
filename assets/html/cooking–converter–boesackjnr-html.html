@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cooking Converter | Boesackjnr</title>
+  <link rel="stylesheet" href="/assets/css/cooking–converter–boesackjnr-css.css">
+
+</head>
+<body>
+  <!-- <h3> Cooking Measurement Converter </h3> --><br />
+  <div class="container">
+    <!-- Volume Converter -->
+    <div class="card">
+      <div class="card-content">
+        <h2 style="text-align: center;">Volume Converter</h2>
+        <label for="volumeUnit">Select unit:</label>
+        <select id="volumeUnit">
+          <option value="cups">Cups</option>
+          <option value="tablespoons">Tablespoons</option>
+          <option value="teaspoons">Teaspoons</option>
+          <option value="liters">Liters</option>
+        </select>
+        <button class="swap-btn" id="swapVolume">↔ Swap</button>
+        <input type="range" id="volumeValue" min="0" max="10" step="0.25" value="1">
+        <div class="result" id="volumeResult">1 cup = 240 ml</div>
+      </div>
+    </div>
+
+    <!-- Weight Converter -->
+    <div class="card">
+      <div class="card-content">
+        <h2 style="text-align: center;">Weight Converter</h2>
+        <label for="weightUnit">Select unit:</label>
+        <select id="weightUnit">
+          <option value="ounces">Ounces</option>
+          <option value="pounds">Pounds</option>
+          <option value="grams">Grams</option>
+          <option value="kilograms">Kilograms</option>
+        </select>
+        <button class="swap-btn" id="swapWeight">↔ Swap</button>
+        <input type="range" id="weightValue" min="0" max="16" step="0.25" value="1">
+        <div class="result" id="weightResult">1 oz = 28.35 g</div>
+      </div>
+    </div>
+  </div>
+
+<!-- Simple Calculator (perfectly aligned bottom row) -->
+<section class="card calculator-card">
+  <h3>calculator</h3>
+  <input 
+    type="text" 
+    id="calcDisplay" 
+    readonly 
+    style="width:100%; padding:0.5rem; font-size:1.1rem; margin-bottom:0.6rem; border-radius:0.5rem; border:1px solid #ddd; text-align:right; background:#f9f9f9;">
+  
+  <div class="calc-grid">
+    <!-- Main Rows -->
+    <button class="calcBtn">7</button>
+    <button class="calcBtn">8</button>
+    <button class="calcBtn">9</button>
+    <button class="calcBtn">/</button>
+
+    <button class="calcBtn">4</button>
+    <button class="calcBtn">5</button>
+    <button class="calcBtn">6</button>
+    <button class="calcBtn">*</button>
+
+    <button class="calcBtn">1</button>
+    <button class="calcBtn">2</button>
+    <button class="calcBtn">3</button>
+    <button class="calcBtn">-</button>
+
+    <button class="calcBtn">0</button>
+    <button class="calcBtn">%</button>
+    <button class="calcBtn">+</button>
+    <button class="calcBtn" id="equals">=</button>
+
+    <!-- Bottom Row (inside grid) -->
+    <button class="calcBtn special" id="allClear">AC</button>
+    <button class="calcBtn special" id="clearEntry">CE</button>
+    <button class="calcBtn special">.</button>
+    <button class="calcBtn" id="equalsBottom">=</button>
+  </div>
+</section>
+  
+  <!-- SCRIPT -->
+<script src="/assets/js/cooking–converter–boesackjnr-js.js"></script> 
+</body>
+</html>

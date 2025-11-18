@@ -1,0 +1,196 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%);
+
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    background: #ddd;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    min-height: 340px;
+  }
+
+  .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    accent-color: #ff8c42;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+
+  .swap-btn {
+    background: #ff8c42;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    align-self: center;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+  }
+
+  .swap-btn:hover {
+    background: #e6792f;
+  }
+
+  .result {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #2b2b2b;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  .calculator-card {
+    max-width: 360px;
+    margin: 1.8rem auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .calculator-card:hover {
+    transform: scale(1.02);
+  }
+
+  .calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    grid-auto-rows: 45px;
+  }
+
+  .calcBtn {
+    background: #f2f2f2;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .calcBtn:hover {
+    background: #e6e6e6;
+  }
+
+  .calcBtn:active {
+    transform: scale(0.96);
+  }
+
+  /* Both equals buttons match style */
+  .calcBtn#equals,
+  .calcBtn#equalsBottom {
+    background: #ff8c42;
+    color: white;
+    font-weight: bold;
+    grid-column: 4 / 5;  /* rightmost column */
+    grid-row: 4 / 6;     /* spans last two rows */
+    height: 100%;
+  }
+
+  .calcBtn#equals:hover,
+  .calcBtn#equalsBottom:hover {
+    background: #45a049;
+  }
+
+  /* Special buttons */
+  .calcBtn.special {
+    background: #ff8c42;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Ensure bottom buttons stay aligned in the grid */
+  .calc-grid button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .calculator-card {
+      margin: 1rem;
+      padding: 0.7rem;
+      max-width: 95%;
+    }
+
+    .calcBtn {
+      padding: 0.6rem;
+      font-size: 0.95rem;
+    }
+  }
