@@ -257,9 +257,9 @@
     }
 
     .info-item-1 {
-      background-image: url(/assets/imgs/about-me/headshot-001.jpg);
+      background-image: url(/assets/imgs/about-me/headshot-0011.jpg);
       background-position: top;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       height: 13vh;
 
@@ -276,9 +276,9 @@
     }
 
     .info-item-2 {
-      background-image: url(/assets/imgs/about-me/headshot-002.jpg);
+      background-image: url(/assets/imgs/about-me/headshot-0022.jpg);
       background-position: top;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       height: 13vh;
 
@@ -295,9 +295,9 @@
     }
     
     .info-item-3 {
-      background-image: url(/assets/imgs/about-me/headshot-003.jpg);
+      background-image: url(/assets/imgs/about-me/headshot-0033.jpg);
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
       height: 13vh;
 
@@ -511,4 +511,5 @@
     footer.show {
       opacity: 1;
       transform: translateY(0);
+
     }
