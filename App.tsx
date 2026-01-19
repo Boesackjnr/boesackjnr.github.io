@@ -1,0 +1,1 @@
+// Deprecated: App logic moved to index.html

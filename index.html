@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Boesackjnr | Creative Developer & Producer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06e4f9",
+                        "background-dark": "#121416",
+                        "surface": "#1c1f22",
+                        "border-muted": "#232729"
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #121416;
+            color: #f1f5f9;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #121416; }
+        ::-webkit-scrollbar-thumb { background: #232729; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #06e4f9; }
+        
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Custom Animations */
+        @keyframes pulse-primary {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-primary {
+            animation: pulse-primary 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* skills */
+
+        .skills-section {
+        padding: 0 50px;
+        margin-bottom: 100px;
+        }
+
+        .skills-section h2 {
+        text-align: center;
+        font-size: 35px;
+        }
+
+        .skills-section .text {
+        text-align: center;
+        margin-bottom: 3px;
+        }
+
+        .skills-section .cells {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+
+        .skills-section .cells .cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        width: 200px;
+        padding: 10px 20px;
+        margin: 10px;
+        margin-top: 40px;
+        border: 0.5px solid #06e4f9;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,180,216,0.2);
+        transition: transform 0.3s, background 0.3s;
+        }
+
+        .skills-section .cells .cell img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        border-radius: 2px;
+        }
+
+        .skills-section .cells .cell span {
+        font-size: 18px;
+        }
+
+        .skills-section .cells .cell:hover {
+        transform: translateY(-5px);
+        cursor: none;
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
+    
+    <div class="flex flex-col md:flex-row min-h-screen">
+        
+        <!-- Sidebar -->
+            <aside class="fixed bottom-0 left-0 w-full h-16 md:h-screen md:w-20 border-t md:border-t-0 md:border-r border-border-muted flex flex-row md:flex-col items-center py-0 md:py-8 z-50 bg-background-dark/95 backdrop-blur-md md:backdrop-blur-none">
+                <div class="hidden md:flex mb-12">
+                    <div class="size-10 bg-primary flex items-center justify-center rounded shadow-[0_0_15px_rgba(6,228,249,0.3)]">
+                        <span class="material-symbols-outlined text-background-dark font-black">terminal</span>
+                    </div>
+                </div>
+                <nav class="flex flex-row md:flex-col gap-4 md:gap-8 flex-1 justify-around md:justify-start w-full md:w-auto px-4 md:px-0">
+                    <a target="_blank" href="https://hearthis.at/boesackjnr/"
+                       class="nav-item p-3 transition-all duration-300 relative group flex items-center justify-center text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined text-2xl">graphic_eq</span></a>
+
+                    <a target="_blank" href="https://www.youtube.com/@GANGLUVU"
+                       class="nav-item p-3 transition-all duration-300 relative group flex items-center justify-center text-slate-500 hover:text-primary">
+                        <span class="material-symbols-outlined text-2xl">sports_esports</span></a>
+                    </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 w-full md:ml-20">
+            <!-- Header -->
+            <header class="h-16 md:h-20 border-b border-border-muted flex items-center justify-between px-4 md:px-10 sticky top-0 bg-background-dark/80 backdrop-blur-md z-40">
+                <div class="flex items-center gap-3 md:gap-6">
+                    <h2 class="text-lg md:text-xl font-black tracking-tighter uppercase group cursor-pointer whitespace-nowrap">
+                        Christopher <span class="text-primary transition-all group-hover:tracking-[0.1em]">D</span>
+                    </h2>
+                    <div class="flex h-6 md:h-7 items-center justify-center gap-x-1 md:gap-x-2 rounded bg-primary/10 px-2 md:px-3 border border-primary/20 animate-pulse shrink-0">
+                        <span class="material-symbols-outlined text-primary text-[8px] md:text-[10px]">radio_button_checked</span>
+                        <p class="text-primary text-[8px] md:text-[10px] font-bold uppercase tracking-wider">Available</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 md:gap-8">
+                    <nav class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            
+                <a href="assets/pdf/JUNIOR-FRONT-END-DELISANI-MTHETWA.pdf" target="_blank" rel="noopener noreferrer"
+                    class="bg-primary text-background-dark px-4 md:px-6 py-2 rounded text-[8px] md:text-[10px] font-black uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-[0_4px_10px_rgba(6,228,249,0.2)] whitespace-nowrap">CV
+                </a>
+            </header>
+
+            <div class="max-w-[1920px] mx-auto w-full px-4 sm:px-6 md:px-0">
+                
+                <!-- Hero Section -->
+                <section class="p-4 md:p-10">
+                    <div class="relative w-full min-h-[500px] md:aspect-[21/9] md:min-h-0 rounded-xl overflow-hidden bg-surface border border-border-muted group shadow-2xl flex flex-col">
+                        <div class="absolute inset-0 opacity-20 pointer-events-none">
+                            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #333 1px, transparent 0); background-size: 40px 40px;"></div>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/5 blur-[80px] md:blur-[120px] rounded-full"></div>
+                        </div>
+                        <div class="relative flex-1 flex flex-col justify-end p-6 md:p-12 gap-6 md:gap-8 z-10">
+                            <div class="space-y-3 md:space-y-4">
+                                <p class="text-primary font-mono text-[10px] md:text-[12px] tracking-[0.3em] md:tracking-[0.5em] uppercase font-bold">Creative Developer + Producer</p>
+                                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+                                    FRONTEND DEV<br/>
+                                    <span class="text-transparent" style="-webkit-text-stroke: 1px rgba(6, 228, 249, 0.6)">DJ | PRODUCER</span>
+                                </h1>
+                            </div>
+                            <p class="max-w-2xl text-slate-400 text-base md:text-xl leading-relaxed font-light">
+                                Synthesizing high-performance React interfaces with deep house aesthetics. 
+                                Designing experiences where <span class="text-slate-200 font-medium">code meets sound</span>.
+                            </p>
+                            <div class="flex pt-2">
+                            <a target="_blank" href="https://github.com/Boesackjnr"
+                                class="bg-primary text-background-dark px-6 md:px-8 py-3 md:py-4 rounded font-black uppercase tracking-widest text-[11px] md:text-xs flex items-center gap-3 hover:gap-5 transition-all group shadow-[0_0_20px_rgba(6,228,249,0.3)] active:scale-95">
+                                    View Projects
+                                    <span class="material-symbols-outlined text-sm font-bold">north_east</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="absolute top-6 right-6 flex flex-col items-end gap-1 opacity-40 sm:opacity-100">
+                            <div class="font-mono text-[10px] text-slate-500 tracking-tighter uppercase">EST. 2026 // SYSTEM_ONLINE</div>
+                            <div class="w-12 h-[1px] bg-primary/30"></div>
+                        </div>
+                    </div>
+                </section>
+
+        <!-- skilss -->
+                <section id="skills" class="skills-section">
+                        <div class="cells">
+                    <div class="cell">
+                        <img src="assets/imgs/logos/html-logo.webp" alt="html logo">
+                            <span>HTML</span>
+                        </div>
+        
+                    <div class="cell">
+                        <img src="assets/imgs/logos/css-logo.webp" alt="css logo">
+                            <span>CSS</span>
+                        </div>
+        
+                    <div class="cell">
+                        <img src="assets/imgs/logos/javascript-logo.webp" alt="javascript logo">
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Featured Work -->
+                <section class="px-6 md:px-10 py-10">
+                    <div class="flex items-center justify-between mb-8 border-b border-border-muted pb-4">
+                        <h3 class="text-xl md:text-2xl font-black uppercase flex items-center gap-3 tracking-tighter">
+                            <span class="text-primary material-symbols-outlined">Queue_Music</span>
+                            Releases
+                        </h3>
+                        <div class="hidden sm:block text-slate-500 font-mono text-[10px] tracking-widest uppercase">/Selected Works 2026</div>
+                    </div>
+                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-8" id="projects-grid">
+                        <!-- Projects injected by JS -->
+                    </div>
+                </section>
+
+                <!-- Music and Gaming -->
+                <section class="px-6 md:px-10 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Music Section -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="flex items-center justify-between border-b border-border-muted pb-4">
+                            <h3 class="text-lg md:text-xl font-black flex items-center gap-3 uppercase tracking-tighter">
+                                <span class="text-primary material-symbols-outlined">graphic_eq</span>
+                                Latest Mixes
+                            </h3>
+                        </div>
+                        <div class="bg-surface border border-border-muted p-4 md:p-8 rounded-xl flex flex-col sm:flex-row items-center gap-6 md:gap-8 relative overflow-hidden group">
+                            <div class="absolute -right-20 -top-20 size-64 bg-primary/5 blur-[100px] rounded-full group-hover:bg-primary/10 transition-colors pointer-events-none"></div>
+                            <div class="size-32 md:size-40 bg-background-dark border border-border-muted flex-shrink-0 relative group/art cursor-pointer rounded-lg overflow-hidden shadow-2xl">
+                                <div class="absolute inset-0 flex items-center justify-center bg-primary/20 opacity-0 group-hover/art:opacity-100 transition-opacity z-10">
+                                    <span class="material-symbols-outlined text-primary text-4xl md:text-6xl">play_circle</span>
+                                </div>
+                                <img class="w-full h-full object-cover transition-transform duration-700 group-hover/art:scale-110" src="/assets/imgs/mixart/LSYK.png" alt="Mix Art">
+                            </div>
+                            <div class="flex-1 space-y-4 md:space-y-6 w-full text-center sm:text-left">
+                                <div>
+                                    <h4 class="text-xl md:text-2xl font-black tracking-tight uppercase">Campus (Student) Mixes</h4>
+                                    <p class="text-[9px] md:text-[10px] font-mono text-primary uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold mt-1">Deep House / Dance House • 124 BPM</p>
+                                </div>
+                                <div class="flex items-end gap-1 h-12 md:h-16 w-full px-1 justify-center sm:justify-start" id="visualizer">
+                                    <!-- Visualizer bars injected by JS -->
+                                </div>
+                                <div class="flex items-center justify-between text-[9px] md:text-[10px] font-mono text-slate-500 uppercase tracking-widest font-bold">
+                                    <span class="flex items-center gap-2"><span class="text-primary">04:12</span> / 58:00</span>
+                                    <div class="flex items-center gap-2 text-primary animate-pulse-primary">
+                                        <span class="size-1 md:size-1.5 rounded-full bg-primary"></span> Life As You Know It (LSYK)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gaming Section -->
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between border-b border-border-muted pb-4">
+                            <h3 class="text-xl font-black flex items-center gap-3 uppercase tracking-tighter">
+                                <span class="text-primary material-symbols-outlined">sports_esports</span>
+                                Logged In
+                            </h3>
+                        </div>
+                        <div class="bg-surface border border-border-muted rounded-xl p-6 space-y-8 relative overflow-hidden group">
+                            <div class="flex items-center gap-5">
+                                <div class="size-14 rounded-lg bg-background-dark border border-border-muted overflow-hidden ring-2 ring-primary/20 ring-offset-2 ring-offset-surface">
+                                    <img class="w-full h-full object-cover" src="https://yt3.googleusercontent.com/XlcfbOQVZQf9SfgLWS3o62grTwrWOWsnilxjNxx6SWcAKs9DRB6bqp9Wrt_xudHDvjuAjf3lCrk=s160-c-k-c0x00ffffff-no-rj" alt="Avatar">
+                                </div>
+                                <div>
+                                    <p class="text-sm font-black uppercase tracking-widest">LUVUGAMING</p>
+                                    <div class="flex items-center gap-2 mt-1">
+                                        <div class="size-2 rounded-full bg-primary shadow-[0_0_5px_#06e4f9]"></div>
+                                        <p class="text-[10px] text-primary font-mono font-bold uppercase tracking-widest">In-GameS</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <p class="text-[10px] font-mono text-slate-500 uppercase tracking-widest font-black">Current Rotation</p>
+                                <div class="space-y-2" id="gaming-list">
+                                    <!-- Games injected by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="p-6 md:p-10 mt-10 mb-16 md:mb-0 border-t border-border-muted flex flex-col items-center text-center">
+                    <div class="max-w-4xl w-full flex flex-col items-center">
+                        <h2 class="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter mb-8 md:mb-12 uppercase leading-none">
+                            Let's build something<br/>
+                            <span class="text-primary text-transparent" style="-webkit-text-stroke: 1px #06e4f9">unforgettable.</span>
+                        </h2>
+                        <div class="flex flex-wrap justify-center gap-x-6 md:gap-x-12 gap-y-4 md:gap-y-6">
+                            <a href="https://soundcloud.com/boesackjnr" target="_blank" class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-slate-500 hover:text-primary transition-all duration-300 flex items-center gap-2 md:gap-3 group">
+                                <span class="material-symbols-outlined text-base md:text-lg group-hover:scale-125 transition-transform">graphic_eq</span> SoundCloud
+                            </a>
+                            <a href="https://www.linkedin.com/in/boesackjnr/" target="_blank" class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-slate-500 hover:text-primary transition-all duration-300 flex items-center gap-2 md:gap-3 group">
+                                <span class="material-symbols-outlined text-base md:text-lg group-hover:scale-125 transition-transform">person</span> LinkedIn
+                            </a>
+                            <a href="https://wa.me/0691856391" target="_blank" class="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-slate-500 hover:text-primary transition-all duration-300 flex items-center gap-2 md:gap-3 group">
+                                <span class="material-symbols-outlined text-base md:text-lg group-hover:scale-125 transition-transform">mail</span> whatsapp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-16 md:mt-24 pt-8 w-full border-t border-border-muted flex flex-col md:flex-row justify-center items-center gap-x-10 lg:gap-x-16 gap-y-6 text-[8px] md:text-[10px] font-mono text-slate-500 uppercase tracking-[0.2em] md:tracking-[0.4em]">
+                        <span class="font-bold whitespace-nowrap text-slate-300 font-black whitespace-nowrap">© 2026 Delisani</span>
+                        <div class="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-12 gap-y-4">
+                            <span class="hover:text-primary cursor-pointer transition-colors whitespace-nowrap">Privacy</span>
+                            <span class="hover:text-primary cursor-pointer transition-colors whitespace-nowrap">Terms</span>
+                            <span class="text-slate-300 font-black whitespace-nowrap">Built with ❤</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Projects Data
+        const projects = [
+            {
+                id: '01',
+                title: 'JD I',
+                description: 'Real-time Deep House Progressive, Made out of ❤ Since 2009 Music.',
+                tags: ['Deep House', '1880ReaLs'],
+                filename: '19 SEP 2026',
+                image: '/assets/imgs/releases/JDI.jpg',
+                code: [
+                    { color: 'text-purple-400', text: 'const', indent: 0 },
+                    { color: 'text-blue-400', text: ' Dashboard', indent: 0 },
+                    { color: 'text-slate-100', text: ' = () => {', indent: 0 },
+                    { color: 'text-purple-400', text: '  return', indent: 1 },
+                    { color: 'text-slate-100', text: ' (', indent: 1 },
+                    { color: 'text-primary', text: '    <Container>', indent: 2 },
+                    { color: 'text-primary', text: '      <AnalyticGrid', indent: 2 },
+                    { color: 'text-slate-300', text: '        data={liveStats}', indent: 2 },
+                    { color: 'text-primary', text: '      />', indent: 2 },
+                    { color: 'text-slate-100', text: '  );', indent: 1 },
+                    { color: 'text-slate-100', text: '};', indent: 0 }
+                ]
+            },
+            {
+                id: '02',
+                title: 'JD II',
+                description: 'Extended Play of the JD I with NEW sounds/songs and local features.',
+                tags: ['Deep house', '1880ReaLs'],
+                filename: '20 DEC 2026',
+                image: '/assets/imgs/releases/JDII.jpg',
+                code: [
+                    { color: 'text-purple-400', text: 'export function', indent: 0 },
+                    { color: 'text-blue-400', text: ' initSynth', indent: 0 },
+                    { color: 'text-slate-100', text: '() {', indent: 0 },
+                    { color: 'text-slate-300', text: '  ctx = new AudioContext();', indent: 1 },
+                    { color: 'text-slate-300', text: '  osc = ctx.createOsc();', indent: 1 },
+                    { color: 'text-slate-300', text: "  osc.type = 'sine';", indent: 1 },
+                    { color: 'text-slate-300', text: '  osc.freq.set(440);', indent: 1 },
+                    { color: 'text-slate-300', text: '  osc.start();', indent: 1 },
+                    { color: 'text-slate-100', text: '}', indent: 0 }
+                ]
+            }
+        ];
+
+        // Games Data
+        const games = [
+            { name: 'Euro Truck Simulator 2', hours: 240, progress: 85 },
+            { name: 'American Truck Simulator', hours: 182, progress: 60 }
+        ];
+
+        // Inject Projects
+        const projectsGrid = document.getElementById('projects-grid');
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = "bg-surface border border-border-muted rounded-xl overflow-hidden flex flex-col group hover:border-primary/30 transition-all duration-500";
+            
+            const codeLines = project.code.map(line => `
+                <div style="padding-left: ${line.indent}rem">
+                    <span class="${line.color}">${line.text}</span>
+                </div>
+            `).join('');
+
+            const tagsHtml = project.tags.map(tag => `
+                <span class="text-[9px] md:text-[10px] font-bold font-mono border border-border-muted px-2 py-1 uppercase text-slate-500 hover:text-primary hover:border-primary/50 cursor-default transition-colors">
+                    ${tag}
+                </span>
+            `).join('');
+
+            card.innerHTML = `
+                <div class="p-4 border-b border-border-muted flex items-center justify-between bg-background-dark/50">
+                    <div class="flex gap-1.5">
+                        <span class="size-2.5 rounded-full bg-red-500/30"></span>
+                        <span class="size-2.5 rounded-full bg-yellow-500/30"></span>
+                        <span class="size-2.5 rounded-full bg-green-500/30"></span>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-500 tracking-widest">${project.filename}</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 flex-1">
+                    <div class="p-4 md:p-6 bg-[#0d0f11] font-mono text-[10px] md:text-[11px] leading-relaxed text-slate-400 overflow-hidden border-b sm:border-b-0 sm:border-r border-border-muted flex flex-col justify-center min-h-[150px]">
+                        ${codeLines}
+                    </div>
+                    <div class="relative overflow-hidden aspect-video sm:aspect-auto">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    </div>
+                </div>
+                <div class="p-6 bg-surface">
+                    <h4 class="text-lg md:text-xl font-black mb-1 uppercase tracking-tight">${project.title}</h4>
+                    <p class="text-slate-400 text-xs md:text-sm mb-6 font-light">${project.description}</p>
+                    <div class="flex flex-wrap gap-2">
+                        ${tagsHtml}
+                    </div>
+                </div>
+            `;
+            projectsGrid.appendChild(card);
+        });
+
+        // Inject Visualizer
+        const visualizer = document.getElementById('visualizer');
+        for (let i = 0; i < 30; i++) {
+            const bar = document.createElement('div');
+            bar.className = `flex-1 max-w-[4px] rounded-full transition-all duration-300 ${i < 12 ? 'bg-primary' : 'bg-slate-700'} ${i > 20 ? 'hidden sm:block' : ''}`;
+            bar.style.height = `${Math.random() * 80 + 20}%`;
+            bar.style.opacity = i < 12 ? '1' : '0.3';
+            visualizer.appendChild(bar);
+        }
+
+        // Inject Gaming
+        const gamingList = document.getElementById('gaming-list');
+        games.forEach(game => {
+            const gameDiv = document.createElement('div');
+            gameDiv.className = "p-3 bg-background-dark/30 border border-border-muted rounded group/game hover:border-primary/40 transition-colors";
+            gameDiv.innerHTML = `
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-[11px] font-black uppercase tracking-tight">${game.name}</span>
+                    <span class="text-[10px] font-mono text-slate-500 font-bold">${game.hours} HRS</span>
+                </div>
+                <div class="h-1 bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-primary shadow-[0_0_5px_#06e4f9] transition-all duration-1000" style="width: ${game.progress}%"></div>
+                </div>
+            `;
+            gamingList.appendChild(gameDiv);
+        });
+
+        // Simple Tab Handling
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(i => {
+                    i.classList.remove('text-primary');
+                    i.classList.add('text-slate-500');
+                    const indicator = i.querySelector('.nav-indicator');
+                    if (indicator) indicator.remove();
+                });
+                item.classList.add('text-primary');
+                item.classList.remove('text-slate-500');
+                
+                const indicator = document.createElement('div');
+                indicator.className = "nav-indicator absolute top-0 md:top-auto md:right-0 bottom-auto md:bottom-0 w-full md:w-0.5 h-0.5 md:h-full bg-primary shadow-[0_0_8px_#06e4f9]";
+                item.appendChild(indicator);
+            });
+        });
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
