@@ -1,4 +1,4 @@
-🚀 Delisani Boesackkjnr Mthethwa – Creative Developer & Audio Producer 🚀 
+🚀 Delisani Christopher Mthethwa – Creative Developer, House Music DJ & Audio Producer 🚀 
 
 [![Available for Hire](https://img.shields.io/badge/Status-Available_for_Hire-06e4f9?style=for-the-badge&logo=react)](mailto:boesackjnr@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Demo-white?style=for-the-badge&logo=google-chrome)](https://boesackjnr.github.io)
