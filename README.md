@@ -27,7 +27,7 @@ I am a Junior Frontend Vibe Code Engineer specializing in building immersive, lo
 - 🎵 [SoundCloud](soundcloud.com/boesackjnr)
 
 ---
+for business enquries: bosackjnr@gmail.com or follow the links.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Designed_&_Built_With_❤-06e4f9?style=flat-square" alt="Footer Logo" />
-</p>
+God Bless!!
+# boesackjnr.github.io | a life @1880ReaLs
